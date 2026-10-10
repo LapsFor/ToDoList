@@ -5,6 +5,7 @@ class Task {
         this.text = text;
         this.completed = false;
         this.id = nextId++;
+        this.startDate = new Date();
     }
 }
 
@@ -29,11 +30,22 @@ addTaskButton.addEventListener('click', () => {
     li.textContent = text;
     taskList.appendChild(li);
 
+    const dateSpan = document.createElement('small');
+    dateSpan.textContent = ' (' + newTask.startDate.toLocaleString('ru-RU', {
+        day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'
+    }) + ')';
+    dateSpan.style.color = 'gray';
+    dateSpan.style.marginLeft = '10px';
+    li.appendChild(dateSpan);
+
+
     // создаем кнопку удаления задачи
     const button = document.createElement('button');
-    button.textContent = 'Удалить';
+    button.textContent = 'X';
     li.appendChild(button);
     taskInput.value = '';
+
+
 
     // Добавляем обработчик события для кнопки удаления
     button.addEventListener('click', () => {

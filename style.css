@@ -1,0 +1,38 @@
+/* Убираем стандартные точки у списка и внешние отступы */
+#taskList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Стили для самой строчки с задачей */
+#taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    background-color: #ffffff;
+    font-size: 16px;
+    border-radius: 50px; /* Делает края круглыми, как у input */
+    margin-bottom: 10px; /* Раздвигает задачи друг от друга */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); /* Добавляет легкую тень для красоты */
+    border: none; /* Убирает старую серую полоску */
+}
+
+/* Стили для кнопки удаления */
+#taskList li button {
+    background-color: transparent;
+    border: 1px solid #dc3545; /* Красная обводка */
+    color: #dc3545;
+    border-radius: 50%;        /* Делает кнопку круглой */
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s; /* Плавная анимация наведения */
+}
+
+/* Эффект при наведении курсора на кнопку удаления */
+#taskList li button:hover {
+    background-color: #dc3545;
+    color: #ffffff;
+}
