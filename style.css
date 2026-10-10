@@ -24,12 +24,7 @@
 
 /* Стили для кнопки удаления */
 #taskList li button {
-    background-color: transparent;
-    border: 1px solid #dc3545; /* Красная обводка */
-    color: #dc3545;
     border-radius: 50%;        /* Делает кнопку круглой */
-    width: 32px;
-    height: 32px;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s; /* Плавная анимация наведения */
 
@@ -37,15 +32,13 @@
     margin-left: 15px; /* Добавим небольшой отступ, чтобы длинный текст не прилипал к кнопке */
 }
 
-/* Эффект при наведении курсора на кнопку удаления */
-#taskList li button:hover {
-    background-color: #dc3545;
-    color: #ffffff;
-}
-
 #taskList li small {
     flex-shrink: 0; /* Запрещаем дате сплющиваться */
     white-space: nowrap; /* Запрещаем переносить саму дату и время на две разные строчки */
     color: grey; /* Делаем дату серой, чтобы она не отвлекала внимание от текста задачи */
     margin-left: 10px;
+}
+#rightBox {
+    display: flex;
+    align-items: center;
 }
