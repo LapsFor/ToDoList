@@ -34,8 +34,6 @@ addTaskButton.addEventListener('click', () => {
     dateSpan.textContent = ' (' + newTask.startDate.toLocaleString('ru-RU', {
         day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit'
     }) + ')';
-    dateSpan.style.color = 'gray';
-    dateSpan.style.marginLeft = '10px';
     li.appendChild(dateSpan);
 
 
